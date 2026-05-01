@@ -1,0 +1,60 @@
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-card">
+        <form id="registrationForm" novalidate>
+            <h2>Реєстрація</h2>
+            
+            <div class="form-group">
+                <label for="name">Повне ім'я</label>
+                <input type="text" id="name" name="name" placeholder="Введіть ім'я">
+                <span class="error-msg" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="example@mail.com">
+                <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" placeholder="Мінімум 8 символів">
+                <span class="error-msg" id="passwordError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm">Підтвердження пароля</label>
+                <input type="password" id="confirm" name="confirm" placeholder="Повторіть пароль">
+                <span class="error-msg" id="confirmError"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="role">Ваша роль</label>
+                <select id="role" name="role">
+                    <option value="">Оберіть роль...</option>
+                    <option value="student">Студент</option>
+                    <option value="teacher">Викладач</option>
+                    <option value="admin">Адміністратор</option>
+                </select>
+                <span class="error-msg" id="roleError"></span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="terms" name="terms">
+                <label for="terms">Я погоджуюсь з умовами</label>
+                <span class="error-msg" id="termsError"></span>
+            </div>
+
+            <button type="submit" id="submitBtn">Зареєструватися</button>
+            <button type="button" id="resetBtn" class="reset-button">Скинути форму</button>
+      </form>
+        <div id="successMessage" style="display: none;">
+            <h3>Реєстрація успішна! 🎉</h3>
+            <p id="welcomeUser"></p>
+        </div>
+    </div>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
